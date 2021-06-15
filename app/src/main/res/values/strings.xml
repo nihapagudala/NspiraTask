@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Nspira Task</string>
+    <string name="loading">Loading</string>
+    <string name="language">Language: %s</string>
+    <string name="search_hint">GitHub Repository</string>
+    <string name="no_results">No results</string>
+    <string name="unknown">\?</string>
 </resources>
