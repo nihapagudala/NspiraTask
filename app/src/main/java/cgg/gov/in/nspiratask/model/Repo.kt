@@ -17,6 +17,7 @@
 package cgg.gov.`in`.nspiratask.model
 
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
@@ -35,5 +36,7 @@ data class Repo(
     @field:SerializedName("html_url") val url: String,
     @field:SerializedName("stargazers_count") val stars: Int,
     @field:SerializedName("forks_count") val forks: Int,
+//    @SerializedName("owner") @Ignore val owner: OwnerRes,
     @field:SerializedName("language") val language: String?
 )
+

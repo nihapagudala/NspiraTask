@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp">
+
+            <ProgressBar
+                android:id="@+id/pBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/progress"
+                android:visibility="gone"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:src="@drawable/user"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/repo_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/repo_name_size"
+            tools:text="android-architecture" />
+
+        <TextView
+            android:id="@+id/repo_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="10"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/repo_description_size"
+            tools:text="A collection of samples to discuss and showcase different architectural tools and patterns for Android apps." />
+
+        <TextView
+            android:id="@+id/repo_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/row_item_margin_vertical"
+            android:text="@string/language"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/repo_description_size" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/row_item_margin_vertical"
+                    android:src="@drawable/ic_star" />
+
+                <TextView
+                    android:id="@+id/repo_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/row_item_margin_vertical"
+                    android:textSize="@dimen/repo_description_size"
+                    tools:text="30" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ll_star"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/forks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/row_item_margin_vertical"
+                    android:src="@drawable/ic_git_branch" />
+
+                <TextView
+                    android:id="@+id/repo_forks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/row_item_margin_vertical"
+                    android:textSize="@dimen/repo_description_size" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
